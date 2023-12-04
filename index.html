@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="GeoZe: Geometrically-driven aggregation for zero-shot 3D point cloud understanding">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoZe</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#129375;</text></svg>">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GeoZe &#129375;</h1>
+            <h2 class="title is-2 publication-title">Geometrically-driven Aggregation for Zero-shot 3D Point Cloud
+              Understanding</h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=VsmIGqsAAAAJ" target="_blank">Guofeng Mei</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=djO2pVUAAAAJ" target="_blank">Luigi Riz</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=KBZ3zrEAAAAJ" target="_blank">Yiming Wang</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=BQ7li6AAAAAJ" target="_blank">Fabio Poiesi</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Fondazione Bruno Kessler</span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <tt class="author-block">{gmei, luriz, ywang, poiesi}@fbk.eu</tt>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark" disabled
+                    style="pointer-events: none">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body" style="display: flex; flex-direction: column;">
+        <img src="./static/images/teaser.png" alt="GeoZe diagram"
+          style="max-height: 400px; align-self: center;" />
+        <p></p>
+        <h2 class="subtitle has-text-centered" style="margin-top: 30px;">
+          <b>GeoZe</b> is the first training-free aggregation technique for 3D point cloud representations obtained
+          using <b>2D Vision-Language Models (VLMs)</b>. It leverages the point cloud's 3D geometric structure through
+          <b>iterative local-to-global aggregation</b>, significantly improving performance on classification, part
+          segmentation, and semantic segmentation tasks across various datasets.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Zero-shot 3D point cloud understanding can be achieved via 2D Vision-Language Models (VLMs). Existing
+              strategies directly map VLM representations from 2D pixels of rendered or captured views to 3D points,
+              overlooking the inherent and expressible point cloud geometric structure.
+            </p>
+            <p>
+              Geometrically similar or close regions can be exploited for bolstering point cloud understanding as they
+              are likely to share semantic information.
+            </p>
+            <p>
+              To this end, we introduce the first training-free aggregation technique that leverages the point cloud’s
+              3D geometric structure to improve the quality of the transferred VLM representations. Our approach
+              operates iteratively, performing local-to-global aggregation based on geometric and semantic point-level
+              reasoning.
+            </p>
+            <p>
+              We benchmark our approach on three downstream tasks, including classification, part segmentation, and
+              semantic segmentation, with a variety of datasets representing both synthetic/real-world, and
+              indoor/outdoor scenarios.<br>Our approach achieves new state-of-the-art results in all benchmarks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- Method. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method</h2>
+          <img src="./static/images/architecture.png" alt="Architecture of GeoZe" />
+          <div class="content has-text-justified" style="margin-top: 2rem;">
+            <p>
+              In GeoZe, we begin by extracting dense pixel-level VLM representations from each viewpoint image of
+              a point cloud \( \bf{\mathcal{P}} \). Such images can either be rendered or they can be the original ones
+              used for reconstruction. We <b>project these representations onto the 3D points</b>, obtaining \(
+              \bf{\mathcal{F}} \).
+              We also compute <b>point-level geometric representations</b> \( \bf{\mathcal{G}} \) to guide the
+              aggregation of our VLM representations.
+            </p>
+            <p>
+              By utilizing point cloud coordinates and geometric representations, we generate <b>superpoints</b> \(
+              \bar{\bf{\mathcal{P}}} \) along with their associated geometric and VLM representations \(
+              \bar{\bf{\mathcal{G}}} \) and \( \bar{\bf{\mathcal{F}}} \).
+            </p>
+            <p>
+              For each superpoint \( \bar{\bf{p}}_j \), we identify its \(k\text{NN}\) within the point cloud to form
+              the <b>patch</b> \( \bf{\mathcal{P^j}} \). <br>
+              For each patch we perform a <b>local feature aggregation</b> to denoise the VLM representations of each
+              superpoint.
+              Superpoints subsequently undergo a process of <b>global aggregation</b> to further refine their VLM
+              representations.
+              A <b>superpoint-to-point aggregation</b> process is finally applied to update the point representations.
+            </p>
+            <p>
+              We also apply Mean Shift clustering on point-level VLM representations \( \bf{\mathcal{F}} \) to establish
+              <b>VLM representation anchors</b> \( \bf{\mathcal{C}} \).
+              As a last step, we employ such VLM representation anchors to further refine point-level representations
+              through <b>semantic projection</b>. At this point, the VLM representations processed by GeoZe are ready to
+              be utilized for downstream tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Method. -->
+
+  <hr>
+
+  <!-- Qualitative. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Zero-shot part segmentation results on ShapeNetPart [<a href="https://scholar.google.com/scholar_url?url=https://dl.acm.org/doi/pdf/10.1145/2980179.2980238&hl=en&sa=T&oi=gsb-gga&ct=res&cd=0&d=5127412563215364349&ei=efJtZeiaG4rYmgGgxZjwBA&scisig=AFWwaeaaB1b8v2kUZrK3cV7P8KNy" target="_blank">1</a>]</h2>
+          <img src="./static/images/part_seg.png" alt="Qualitative" />
+          <figcaption><i>Top:</i> ground-truth, <i>Middle:</i> PointCLIPv2 [<a href="https://scholar.google.com/scholar_url?url=http://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_PointCLIP_V2_Prompting_CLIP_and_GPT_for_Powerful_3D_Open-world_ICCV_2023_paper.pdf&hl=en&sa=T&oi=gsb-gga&ct=res&cd=0&d=11532369805109504278&ei=rvJtZeK3MoKcmgH3yJyICg&scisig=AFWwaea-XceZD5X3umc8srrm3uYe" target="_blank">2</a>],
+          <i>Bottom:</i> GeoZe <i>(Ours)</i>.<br>Parts segmented by GeoZe are more homogeneous than those segmented by PointCLIPv2.</figcaption>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Method. -->
+
+  <hr>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{mei2023geoze,
+      title={Geometrically-driven aggregation for zero-shot 3D point cloud understanding},
+      author={Mei, Guofeng and Riz, Luigi and Wang, Yiming and Poiesi, Fabio},
+      journal = {},
+      year= {2023}
+    }</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+              The webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
