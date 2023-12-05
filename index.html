@@ -184,7 +184,6 @@
       </div>
     </div>
   </section>
-  <!--/ Method. -->
 
   <hr>
 
@@ -193,22 +192,53 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Zero-shot part segmentation results on ShapeNetPart [<a href="https://scholar.google.com/scholar_url?url=https://dl.acm.org/doi/pdf/10.1145/2980179.2980238&hl=en&sa=T&oi=gsb-gga&ct=res&cd=0&d=5127412563215364349&ei=efJtZeiaG4rYmgGgxZjwBA&scisig=AFWwaeaaB1b8v2kUZrK3cV7P8KNy" target="_blank">1</a>]</h2>
+          <h2 class="title is-3">Zero-shot part segmentation results on ShapeNetPart <small>[<a href="https://scholar.google.com/scholar_url?url=https://doi.org/10.1145/2980179.2980238" target="_blank">1</a>]</small></h2>
           <img src="./static/images/part_seg.png" alt="Qualitative" />
-          <figcaption><i>Top:</i> ground-truth, <i>Middle:</i> PointCLIPv2 [<a href="https://scholar.google.com/scholar_url?url=http://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_PointCLIP_V2_Prompting_CLIP_and_GPT_for_Powerful_3D_Open-world_ICCV_2023_paper.pdf&hl=en&sa=T&oi=gsb-gga&ct=res&cd=0&d=11532369805109504278&ei=rvJtZeK3MoKcmgH3yJyICg&scisig=AFWwaea-XceZD5X3umc8srrm3uYe" target="_blank">2</a>],
+          <figcaption><i>Top:</i> ground-truth, <i>Middle:</i> PointCLIPv2 [<a href="https://openaccess.thecvf.com/content/ICCV2023/html/Zhu_PointCLIP_V2_Prompting_CLIP_and_GPT_for_Powerful_3D_Open-world_ICCV_2023_paper.html" target="_blank">2</a>],
           <i>Bottom:</i> GeoZe <i>(Ours)</i>.<br>Parts segmented by GeoZe are more homogeneous than those segmented by PointCLIPv2.</figcaption>
         </div>
       </div>
     </div>
   </section>
-  <!--/ Method. -->
+
+  <hr>
+
+  <!-- Qualitative. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Zero-shot semantic segmentation results on nuScenes <small>[<a href="https://doi.org/10.1109/CVPR42600.2020.01164" target="_blank">3</a>]</small></h2>
+          <img src="./static/images/nuscenes.png" alt="Qualitative" />
+          <figcaption><i>Left:</i> ground-truth, <i>Center:</i> OpenScene [<a href="https://doi.org/10.1109/CVPR52729.2023.00085" target="_blank">4</a>],
+          <i>Right:</i> GeoZe <i>(Ours)</i>.</figcaption>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- Qualitative. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Zero-shot semantic segmentation results on ScanNet <small>[<a href="https://doi.org/10.1109/CVPR.2017.261" target="_blank">5</a>]</small></h2>
+          <img src="./static/images/anchor.png" alt="Qualitative" />
+          <figcaption><i>First row:</i> ground-truth, <i>Second row:</i> OpenScene [<a href="https://doi.org/10.1109/CVPR52729.2023.00085" target="_blank">4</a>],
+          <i>Third row:</i> GeoZe w/o anchors, <i>Fourth row:</i> GeoZe with anchors.</figcaption>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <hr>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{mei2023geoze,
+      <pre><code>@article{mei2023geoze,
       title={Geometrically-driven aggregation for zero-shot 3D point cloud understanding},
       author={Mei, Guofeng and Riz, Luigi and Wang, Yiming and Poiesi, Fabio},
       journal = {},
