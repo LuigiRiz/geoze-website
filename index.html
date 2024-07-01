@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#129375;</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#129375;</text></svg>">
 
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -31,6 +32,7 @@
             <h1 class="title is-1 publication-title">GeoZe &#129375;</h1>
             <h2 class="title is-2 publication-title">Geometrically-driven Aggregation for Zero-shot 3D Point Cloud
               Understanding</h2>
+            <h3 class="title is-3 publication-title">&#10024; CVPR 2024 Highlight poster &#10024;</h3>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=VsmIGqsAAAAJ" target="_blank">Guofeng Mei</a>,
@@ -57,7 +59,8 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2312.02244.pdf" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <a href="https://arxiv.org/pdf/2312.02244.pdf"
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -66,7 +69,8 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/gfmei/GeoZe" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <a href="https://github.com/gfmei/GeoZe" class="external-link button is-normal is-rounded is-dark"
+                    target="_blank">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -84,8 +88,7 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body" style="display: flex; flex-direction: column;">
-        <img src="./static/images/teaser.png" alt="GeoZe diagram"
-          style="max-height: 400px; align-self: center;" />
+        <img src="./static/images/teaser.png" alt="GeoZe diagram" style="max-height: 400px; align-self: center;" />
         <p></p>
         <h2 class="subtitle has-text-centered" style="margin-top: 30px;">
           <b>GeoZe</b> is the first training-free aggregation technique for 3D point cloud representations obtained
@@ -112,9 +115,9 @@
               overlooking the inherent and expressible point cloud geometric structure.
             </p>
             <p><b>
-              Geometrically similar or close regions can be exploited for bolstering point cloud understanding as they
-              are likely to share semantic information.
-            </b></p>
+                Geometrically similar or close regions can be exploited for bolstering point cloud understanding as they
+                are likely to share semantic information.
+              </b></p>
             <p>
               To this end, we introduce the first training-free aggregation technique that leverages the point cloud’s
               3D geometric structure to improve the quality of the transferred VLM representations. Our approach
@@ -184,10 +187,16 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Zero-shot part segmentation results on ShapeNetPart <small>[<a href="https://scholar.google.com/scholar_url?url=https://doi.org/10.1145/2980179.2980238" target="_blank">1</a>]</small></h2>
+          <h2 class="title is-3">Zero-shot part segmentation results on ShapeNetPart <small>[<a
+                href="https://scholar.google.com/scholar_url?url=https://doi.org/10.1145/2980179.2980238"
+                target="_blank">1</a>]</small></h2>
           <img src="./static/images/part_seg.png" alt="Qualitative" />
-          <figcaption><i>Top:</i> ground-truth, <i>Middle:</i> PointCLIPv2 [<a href="https://openaccess.thecvf.com/content/ICCV2023/html/Zhu_PointCLIP_V2_Prompting_CLIP_and_GPT_for_Powerful_3D_Open-world_ICCV_2023_paper.html" target="_blank">2</a>],
-          <i>Bottom:</i> GeoZe <i>(Ours)</i>.<br>Parts segmented by GeoZe are more homogeneous than those segmented by PointCLIPv2.</figcaption>
+          <figcaption><i>Top:</i> ground-truth, <i>Middle:</i> PointCLIPv2 [<a
+              href="https://openaccess.thecvf.com/content/ICCV2023/html/Zhu_PointCLIP_V2_Prompting_CLIP_and_GPT_for_Powerful_3D_Open-world_ICCV_2023_paper.html"
+              target="_blank">2</a>],
+            <i>Bottom:</i> GeoZe <i>(Ours)</i>.<br>Parts segmented by GeoZe are more homogeneous than those segmented by
+            PointCLIPv2.
+          </figcaption>
         </div>
       </div>
     </div>
@@ -200,10 +209,13 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Zero-shot semantic segmentation results on nuScenes <small>[<a href="https://doi.org/10.1109/CVPR42600.2020.01164" target="_blank">3</a>]</small></h2>
+          <h2 class="title is-3">Zero-shot semantic segmentation results on nuScenes <small>[<a
+                href="https://doi.org/10.1109/CVPR42600.2020.01164" target="_blank">3</a>]</small></h2>
           <img src="./static/images/nuscenes.png" alt="Qualitative" />
-          <figcaption><i>Left:</i> ground-truth, <i>Center:</i> OpenScene [<a href="https://doi.org/10.1109/CVPR52729.2023.00085" target="_blank">4</a>],
-          <i>Right:</i> GeoZe <i>(Ours)</i>.</figcaption>
+          <figcaption><i>Left:</i> ground-truth, <i>Center:</i> OpenScene [<a
+              href="https://doi.org/10.1109/CVPR52729.2023.00085" target="_blank">4</a>],
+            <i>Right:</i> GeoZe <i>(Ours)</i>.
+          </figcaption>
         </div>
       </div>
     </div>
@@ -216,10 +228,13 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
-          <h2 class="title is-3">Zero-shot semantic segmentation results on ScanNet <small>[<a href="https://doi.org/10.1109/CVPR.2017.261" target="_blank">5</a>]</small></h2>
+          <h2 class="title is-3">Zero-shot semantic segmentation results on ScanNet <small>[<a
+                href="https://doi.org/10.1109/CVPR.2017.261" target="_blank">5</a>]</small></h2>
           <img src="./static/images/semseg.png" alt="Qualitative" />
-          <figcaption><i>First row:</i> ground-truth, <i>Second row:</i> OpenScene [<a href="https://doi.org/10.1109/CVPR52729.2023.00085" target="_blank">4</a>],
-          <i>Third row:</i> GeoZe.</figcaption>
+          <figcaption><i>First row:</i> ground-truth, <i>Second row:</i> OpenScene [<a
+              href="https://doi.org/10.1109/CVPR52729.2023.00085" target="_blank">4</a>],
+            <i>Third row:</i> GeoZe.
+          </figcaption>
         </div>
       </div>
     </div>
